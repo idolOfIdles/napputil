@@ -5,10 +5,11 @@ import lombok.NonNull;
 import napputils.no.assignment.model.Crew;
 
 @Data public class CrewDto {
-    private String Name;
+    private String id;
+    private String name;
     private Short age;
     private String job;
-    private String weight;
+    private Float weight;
     private String desc;
 
     public static CrewDto convert(Crew crew){
@@ -18,6 +19,7 @@ import napputils.no.assignment.model.Crew;
         crewDto.setJob(crew.getJob());
         crewDto.setWeight(crew.getWeight());
         crewDto.setDesc(crew.getDesc());
+        crewDto.setId(crew.getCrewId());
         return crewDto;
     }
 }

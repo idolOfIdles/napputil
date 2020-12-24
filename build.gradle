@@ -2,7 +2,6 @@ plugins {
 	id 'org.springframework.boot' version '2.4.1'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
-	id 'war'
 }
 
 group = 'napputils.no'
@@ -24,8 +23,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+	testImplementation 'org.testcontainers:junit-jupiter:1.14.3'
+	testCompile "org.testcontainers:mongodb:1.15.1"
+	testCompile "org.testcontainers:junit-jupiter:1.15.1"
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.4.1'
 }
 
 test {

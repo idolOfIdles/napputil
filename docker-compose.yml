@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    container_name: napp-mongodb
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - napp-mongodb:/data/db
+    networks:
+      - napp-net
+  napp:
+    image: napputils/assignment
+    container_name: napp
+    restart: always
+    depends_on:
+      - mongodb
+    environment:
+      JAVA_OPTIONS: "-Xms512m -Xmx2048m"
+      MONGO_HOST: mongodb
+      MONGO_PORT: 27017
+      MONGO_USERNAME: admin
+      MONGO_PASSWORD: admin
+      MONGO_DATABASE: hr
+      SPRING_PROFILE: prod
+    ports:
+      - 8080:8080
+    networks:
+      - napp-net
+
+volumes:
+  napp-mongodb:
+    driver: local
+
+networks:
+  napp-net:
+    driver: bridge

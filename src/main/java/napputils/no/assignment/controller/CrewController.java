@@ -7,6 +7,7 @@ import napputils.no.assignment.service.CrewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -22,18 +23,18 @@ public class CrewController {
     }
 
     @PostMapping(path = "/crew")
-    public CrewDto insertCrew(@RequestBody Crew crew) {
+    public CrewDto insertCrew(@Valid @RequestBody Crew crew) {
         return crewService.insert(crew);
     }
 
     @PutMapping("/crew")
-    public CrewDto update(@RequestBody Crew crew) {
+    public CrewDto update(@Valid @RequestBody Crew crew) {
         return crewService.update(crew);
     }
 
     @GetMapping("/crew/list")
-    public List<CrewLightDto> list() {
-        return crewService.getCrewList();
+    public List<CrewLightDto> list(@RequestParam(required = false, defaultValue = "0") int page, @RequestParam(required = false, defaultValue = "10") int size) {
+        return crewService.getCrewList(page, size);
     }
 
 }
