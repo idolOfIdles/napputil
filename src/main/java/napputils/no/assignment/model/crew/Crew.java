@@ -1,7 +1,8 @@
-package napputils.no.assignment.model;
+package napputils.no.assignment.model.crew;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import napputils.no.assignment.model.BaseModel;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

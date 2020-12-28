@@ -1,8 +1,8 @@
 package napputils.no.assignment.service;
 
-import napputils.no.assignment.model.Crew;
-import napputils.no.assignment.model.dto.CrewDto;
-import napputils.no.assignment.model.dto.CrewLightDto;
+import napputils.no.assignment.model.crew.Crew;
+import napputils.no.assignment.model.crew.dto.CrewDto;
+import napputils.no.assignment.model.crew.dto.CrewLightDto;
 import napputils.no.assignment.util.IntegrationTestBase;
 import napputils.no.assignment.util.TestDataGenerator;
 import org.junit.jupiter.api.AfterEach;

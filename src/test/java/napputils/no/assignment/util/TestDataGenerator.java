@@ -1,7 +1,7 @@
 package napputils.no.assignment.util;
 
-import napputils.no.assignment.model.Crew;
-import napputils.no.assignment.model.Name;
+import napputils.no.assignment.model.crew.Crew;
+import napputils.no.assignment.model.crew.Name;
 
 import java.util.ArrayList;
 import java.util.List;

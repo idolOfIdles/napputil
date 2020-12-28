@@ -1,7 +1,7 @@
-package napputils.no.assignment.model.dto;
+package napputils.no.assignment.model.crew.dto;
 
 import lombok.Data;
-import napputils.no.assignment.model.Crew;
+import napputils.no.assignment.model.crew.Crew;
 
 @Data
 public class CrewLightDto {

@@ -1,8 +1,7 @@
-package napputils.no.assignment.model.dto;
+package napputils.no.assignment.model.crew.dto;
 
 import lombok.Data;
-import lombok.NonNull;
-import napputils.no.assignment.model.Crew;
+import napputils.no.assignment.model.crew.Crew;
 
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;

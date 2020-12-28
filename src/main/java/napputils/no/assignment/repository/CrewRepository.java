@@ -1,8 +1,7 @@
 package napputils.no.assignment.repository;
 
-import napputils.no.assignment.model.Crew;
+import napputils.no.assignment.model.crew.Crew;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;

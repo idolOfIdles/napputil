@@ -1,4 +1,4 @@
-package napputils.no.assignment.model;
+package napputils.no.assignment.model.crew;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

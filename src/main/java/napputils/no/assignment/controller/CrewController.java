@@ -1,8 +1,8 @@
 package napputils.no.assignment.controller;
 
-import napputils.no.assignment.model.Crew;
-import napputils.no.assignment.model.dto.CrewDto;
-import napputils.no.assignment.model.dto.CrewLightDto;
+import napputils.no.assignment.model.crew.Crew;
+import napputils.no.assignment.model.crew.dto.CrewDto;
+import napputils.no.assignment.model.crew.dto.CrewLightDto;
 import napputils.no.assignment.service.CrewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
