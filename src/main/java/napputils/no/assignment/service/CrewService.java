@@ -27,7 +27,7 @@ public class CrewService {
     }
 
     public List<CrewLightDto> getCrewList(int page, int size) {
-        return repository.findByOrderByName(PageRequest.of(page, size))
+        return repository.findByOrderByCreateDate(PageRequest.of(page, size))
                 .stream()
                 .map(crew -> CrewLightDto.convert(crew))
                 .collect(Collectors.toList());

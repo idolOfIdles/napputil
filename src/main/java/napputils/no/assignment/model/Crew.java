@@ -10,20 +10,25 @@ import javax.validation.constraints.NotNull;
 
 @Document(collection = "crew")
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class Crew extends BaseModel {
+
     @Id
     private String crewId;
+
     @NotNull
-    private String name;
+    private Name name;
+
     @Min(value = 0, message = "Positive number")
     private Short age;
+
     private String job;
-    @Min(value = 0, message = "Positive number and unit is in kilogram")
-    private Float weight;// unit is in kg
 
     @Min(value = 0, message = "Positive number and unit is in kilogram")
-    private Integer height;// unit is in kg
+    private Float weight;
+
+    @Min(value = 0, message = "Positive number and unit is in centimeter")
+    private Short height;
 
     private String desc;
 

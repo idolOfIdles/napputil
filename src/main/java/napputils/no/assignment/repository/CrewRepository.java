@@ -13,5 +13,5 @@ import java.util.List;
 public interface CrewRepository extends MongoRepository<Crew, String> {
 
     @Query(fields = "{ 'name' : 1, 'age' : 1, 'job' : 1}")
-    List<Crew> findByOrderByName(Pageable pageable);
+    List<Crew> findByOrderByCreateDate(Pageable pageable);
 }

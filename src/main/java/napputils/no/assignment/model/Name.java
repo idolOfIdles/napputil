@@ -1,24 +1,28 @@
 package napputils.no.assignment.model;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.util.StringUtils;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import napputils.no.assignment.util.StringUtil;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class Name{
+@RequiredArgsConstructor
+@NoArgsConstructor
+public class Name {
     @NotNull
+    @NonNull
     private String firstName;
     private String middleName;
     private String lastName;
 
-    public String getFullName(){
-        return firstName
-                + (middleName!=null? " " + middleName : "")
-                + (lastName!=null? " " + lastName : "");
+    @Override
+    public String toString(){
+        return String.join(" ",
+                firstName,
+                StringUtil.toNullOrEmpty(middleName),
+                StringUtil.toNullOrEmpty(lastName));
     }
 }

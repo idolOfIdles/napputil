@@ -11,7 +11,7 @@ public class CrewLightDto {
 
     public static CrewLightDto convert(Crew crew) {
         CrewLightDto crewDto = new CrewLightDto();
-        crewDto.setName(crew.getName());
+        crewDto.setName(crew.getName().toString());
         crewDto.setAge(crew.getAge());
         crewDto.setJob(crew.getJob());
         return crewDto;

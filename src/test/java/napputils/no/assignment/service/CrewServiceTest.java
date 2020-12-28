@@ -32,7 +32,7 @@ public class CrewServiceTest {
     void testGetCrewList() {
         // Setup our mock repository
         Crew crew = TestDataGenerator.getDummyCrew();
-        doReturn(List.of(crew)).when(crewRepository).findByOrderByName(any());
+        doReturn(List.of(crew)).when(crewRepository).findByOrderByCreateDate(any());
 
         // Execute the service call
         List<CrewLightDto> returnedCrew = crewService.getCrewList(0, 10);
