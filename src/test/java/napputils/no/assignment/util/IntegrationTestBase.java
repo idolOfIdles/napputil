@@ -6,9 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.testcontainers.containers.MongoDBContainer;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -20,9 +18,6 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 )
 @ContextConfiguration(initializers = {IntegrationTestBase.Initializer.class})
 @Testcontainers
-@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
-@TestPropertySource(locations = {"classpath:application-integration-test.properties"})
-
 public abstract class IntegrationTestBase {
     private static final String IMAGE_VERSION = "mongo:4.0.10";
     private static final Integer MONGODB_PORT = 27017;

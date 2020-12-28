@@ -19,7 +19,7 @@ public class Name {
     private String lastName;
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.join(" ",
                 firstName,
                 StringUtil.toNullOrEmpty(middleName),
